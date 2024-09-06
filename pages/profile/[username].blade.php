@@ -19,11 +19,10 @@
 
 <x-dynamic-component :component="((auth()->guest()) ? 'layouts.marketing' : 'layouts.app')">
     @volt('wave.profile')
-        <div class="flex items-center justify-center w-screen h-screen">
-            <div class="max-w-2xl mx-auto">
-                <x-back-button href="/dashboard">Back to Dashboard</x-back-button>
-                <h1 class="mb-3 text-4xl font-light">{{ $this->user->name }}'s Profile Page</h1>
-            </div>
+        <div class="text-center">
+            <x-back-button href="/dashboard">Back to Dashboard</x-back-button>
+            <h1 class="mb-3 text-4xl font-semibold">{{ $this->user->name }}'s Profile Page</h1>
+            <p class="text-xs">File located at <code class="text-xs">{themefolder}/pages/profile/[username].blade.php</code></p>
         </div>
     @endvolt
 </x-dynamic-component>

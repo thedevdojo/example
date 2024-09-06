@@ -1,5 +1,5 @@
-<div class="flex flex-col items-center justify-center w-full h-auto p-20">
-    <div class="flex items-start max-w-2xl mx-auto">
+
+    <div class="flex items-start w-full">
         <ul class="justify-start flex-shrink-0 block w-full text-left lg:w-48">
             <nav class="flex space-x-2 text-gray-600 lg:flex-col lg:space-x-0 lg:space-y-2">
                 <h2 class="mb-2 text-sm font-semibold text-gray-500 uppercase">Settings</h2>
@@ -15,4 +15,3 @@
             {{ $slot}}
         </div>
     </div>
-</div>

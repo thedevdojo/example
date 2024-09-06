@@ -11,14 +11,10 @@
 <x-dynamic-component 
 	:component="$layout"
 >
-    <div class="flex flex-col items-center justify-center w-screen h-screen">
-        <div class="max-w-2xl mx-auto">
-            <x-back-button href="/">Back to Dashboard</x-back-button>
-            <h1 class="mb-3 text-4xl font-light">Changelog</h1>
-            @foreach($logs as $changelog)
-                <a href="{{ route('changelog', ['changelog' => $changelog->id]) }}" class="block underline">{{ $changelog->title }}</a>
-            @endforeach
-        </div>
-    </div>
+    <x-back-button href="/dashboard">Back to Dashboard</x-back-button>
+    <h1 class="mb-3 text-4xl font-light">Changelog</h1>
+    @foreach($logs as $changelog)
+        <a href="{{ route('changelog', ['changelog' => $changelog->id]) }}" class="block underline">{{ $changelog->title }}</a>
+    @endforeach
 
 </x-dynamic-component>
